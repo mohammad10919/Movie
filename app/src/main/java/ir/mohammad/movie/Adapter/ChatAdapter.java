@@ -17,6 +17,7 @@ import ir.mohammad.movie.R;
 import ir.mohammad.movie.model.Chat;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.chatViewHolder>{
+
     List<Chat> chat;
 
     public ChatAdapter(List<Chat> chat) {

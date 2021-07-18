@@ -7,8 +7,8 @@
     <item android:title="message"
         android:icon="@drawable/ic_baseline_message_24"
         android:id="@+id/message"/>
-    <item android:title="setting"
+    <item android:title="City"
         android:icon="@drawable/ic_baseline_home_24"
-        android:id="@+id/setting"/>
+        android:id="@+id/set"/>
 
 </menu>

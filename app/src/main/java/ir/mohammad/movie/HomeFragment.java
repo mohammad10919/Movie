@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
 
     private List<Filter> filter=new ArrayList<>();
     private List<Tabligh>tabligh=new ArrayList<>();
-    private List<ir.mohammad.movie.model.pishnahad>pishnahad=new ArrayList<>();
+    private List<pishnahad>pishnahad=new ArrayList<>();
     private List<Estakhr>estakhr=new ArrayList<>();
     private RecyclerView recyclerViewfilter;
     private RecyclerView recyclerViewtabligh;
