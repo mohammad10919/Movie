@@ -9,6 +9,9 @@
         android:id="@+id/message"/>
     <item android:title="City"
         android:icon="@drawable/ic_baseline_home_24"
-        android:id="@+id/set"/>
+        android:id="@+id/city"/>
+    <item android:title="url"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/url"/>
 
 </menu>
