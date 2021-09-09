@@ -17,7 +17,7 @@ import ir.mohammad.movie.Adapter.ChatAdapter;
 import ir.mohammad.movie.model.Chat;
 
 
-public class chatFragment extends Fragment {
+public class ChatFragment extends Fragment {
 
     private List<Chat> chat=new ArrayList<>();
     private ChatAdapter chatAdapter;

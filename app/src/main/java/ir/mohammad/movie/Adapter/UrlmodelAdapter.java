@@ -17,7 +17,6 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import ir.mohammad.movie.R;
-import ir.mohammad.movie.Webimagemodel;
 import ir.mohammad.movie.model.Urlinjson;
 import ir.mohammad.movie.model.Urlmodel;
 
@@ -39,12 +38,8 @@ public class UrlmodelAdapter extends RecyclerView.Adapter<UrlmodelAdapter.Urlmod
     @Override
     public void onBindViewHolder(@NonNull UrlmodelViewHolder holder, int position) {
         holder.title.setText(urlinjsons.get(position).getTitle());
-        holder.description.setText(urlinjsons.get(position).getDescription());
         holder.price.setText(urlinjsons.get(position).getPrice());
         holder.date.setText(urlinjsons.get(position).getDate());
-        holder.city.setText(urlinjsons.get(position).getCity());
-        holder.latitude.setText(urlinjsons.get(position).getLatitude());
-        holder.longitude.setText(urlinjsons.get(position).getLongitude());
         Picasso.get().load(urlinjsons.get(position).getThumbnail()).into(holder.thumbnail);
 
         }
@@ -59,26 +54,18 @@ public class UrlmodelAdapter extends RecyclerView.Adapter<UrlmodelAdapter.Urlmod
 
     public class UrlmodelViewHolder extends RecyclerView.ViewHolder {
         TextView title;
-        TextView description ;
         TextView price ;
         TextView date;
-        TextView city ;
-        List<Webimagemodel>webimagemodels;
         ImageView thumbnail;
-        TextView latitude;
-        TextView longitude;
+
 
         public UrlmodelViewHolder(@NonNull View itemView) {
             super(itemView);
             title=(TextView) itemView.findViewById(R.id.textitle);
-            description=(TextView) itemView.findViewById(R.id.text_tozih);
             price=(TextView) itemView.findViewById(R.id.textprice);
             date=(TextView) itemView.findViewById(R.id.textdata);
-            city=(TextView) itemView.findViewById(R.id.textcity);
             thumbnail=(ImageView) itemView.findViewById(R.id.imagethum);
-            webimagemodels=itemView.findViewById(R.id.web_recycler);
-            latitude=(TextView) itemView.findViewById(R.id.textlatitude);
-            longitude=(TextView)itemView.findViewById(R.id.textlongitude);
+
         }
     }
 }

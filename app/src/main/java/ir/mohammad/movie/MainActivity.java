@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             return true;
         } else if (item.getItemId() == R.id.message) {
             Toast.makeText(MainActivity.this, "message", Toast.LENGTH_SHORT).show();
-            openFragment(new chatFragment());
+            openFragment(new ChatFragment());
             return true;
         } else if (item.getItemId() == R.id.url) {
             Toast.makeText(MainActivity.this, "url", Toast.LENGTH_SHORT).show();
@@ -71,11 +71,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             return true;
         } else if (item.getItemId() == R.id.Profile) {
             Toast.makeText(MainActivity.this, "message", Toast.LENGTH_SHORT).show();
-            openFragment(new chatFragment());
+            openFragment(new ChatFragment());
+            return true;
 
         }else if (item.getItemId() == R.id.setting) {
             Toast.makeText(MainActivity.this, "message", Toast.LENGTH_SHORT).show();
-            openFragment(new chatFragment());
+            openFragment(new SettingFragment());
+            return true;
            }
         return false;
 
