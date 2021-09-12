@@ -26,6 +26,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import ir.mohammad.movie.Adapter.ChatAdapter;
@@ -35,7 +36,7 @@ import ir.mohammad.movie.model.Urlmodel;
 
 public class UrlFragment extends Fragment {
     private RecyclerView recyclerViewparent;
-    private List<Urlinjson> urlinjsonm;
+    private List<Urlinjson> urlinjsons=new ArrayList<>();
     private UrlmodelAdapter urlmodelAdapter;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -48,12 +49,8 @@ public class UrlFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_url, container, false);
-        recyclerViewparent = view.findViewById(R.id.recyclerurl);
+        recyclerViewparent = (RecyclerView) view.findViewById(R.id.recyclerurl);
         recyclerViewparent.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
-//        recyclerViewwebimage=view.findViewById(R.id.web_recycler);
-//        recyclerViewwebimage.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-
-
 
         RequestQueue queue = Volley.newRequestQueue(getContext());
         String Divarurl = "http://10.0.2.2:5000/";
@@ -77,11 +74,11 @@ public class UrlFragment extends Fragment {
 
                         }
 
-                        urlinjsonm.add(urlparent);
+                        urlinjsons.add(urlparent);
                     }
 
-                    urlmodel.setUrlinjsons(urlinjsonm);
-                    urlmodelAdapter=new UrlmodelAdapter(urlinjsonm);
+                    urlmodel.setUrlinjsons(urlinjsons);
+                    urlmodelAdapter=new UrlmodelAdapter(urlinjsons);
                     recyclerViewparent.setAdapter(urlmodelAdapter);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -119,18 +116,3 @@ public class UrlFragment extends Fragment {
     }
 
 }
-//JSONArray jsonarryweb=jsonObject.getJSONArray("web_images");
-//                        for (int a = 0 ; a<jsonarryweb.length();a++){
-//                            JSONArray ja=jsonarryweb.getJSONArray(a);
-//                            for (int b = 0 ; b<ja.length();b++){
-//                                JSONObject jsonObject1=jsonarryweb.getJSONObject(b);
-//                                Webimagemodel webimagemodel=new Webimagemodel();
-//                                webimagemodel.setSrc(jsonObject1.getString("src"));
-//                                webimagemodel.setType(jsonObject1.getString("type"));
-//                                webimagemodels.add(webimagemodel);
-//
-//                            }
-//                             urlparent.setWeb_image(webimagemodels);
-//                            webimageAdapter =new WebimageAdapter(webimagemodels);
-//                            recyclerViewwebimage.setAdapter(urlmodelAdapter);
-//                            }

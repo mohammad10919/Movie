@@ -25,7 +25,8 @@ public class UrlmodelAdapter extends RecyclerView.Adapter<UrlmodelAdapter.Urlmod
     private List<Urlinjson>urlinjsons;
     private Context mcontex;
 
-    public UrlmodelAdapter(List<Urlinjson> urlmodel) {
+    public UrlmodelAdapter(List<Urlinjson> urlinjsons) {
+        this.urlinjsons = urlinjsons;
     }
 
     @NonNull
@@ -43,8 +44,6 @@ public class UrlmodelAdapter extends RecyclerView.Adapter<UrlmodelAdapter.Urlmod
         Picasso.get().load(urlinjsons.get(position).getThumbnail()).into(holder.thumbnail);
 
         }
-
-
 
 
     @Override
