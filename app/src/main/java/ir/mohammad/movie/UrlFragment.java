@@ -49,7 +49,8 @@ public class UrlFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_url, container, false);
-        recyclerViewparent = (RecyclerView) view.findViewById(R.id.recyclerurl);
+        recyclerViewparent=(RecyclerView) view.findViewById(R.id.recyclerurl);
+
         recyclerViewparent.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false));
 
         RequestQueue queue = Volley.newRequestQueue(getContext());
